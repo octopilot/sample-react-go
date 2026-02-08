@@ -26,11 +26,21 @@ Or with Skaffold: `skaffold build`. For CI, use `op build-push --repo <registry>
 
 ## Run
 
+**With op (preconfigured in .run.yaml; local dev only):**
+
+```bash
+op run context list   # list contexts
+op run api            # Terminal 1 — API (port 8081)
+op run frontend       # Terminal 2 — Frontend (port 8080)
+```
+
+Ports and env (including `VITE_API_URL`) are in **.run.yaml**. For production or multi-container use docker-compose, Kubernetes (e.g. kind), or your deploy path. Or with Docker directly:
+
 ```bash
 # Terminal 1 — API
 docker run -p 8081:8080 sample-react-go-api
 
-# Terminal 2 — Frontend (needs to call API; set VITE_API_URL when building if you want default)
+# Terminal 2 — Frontend
 docker run -p 8080:8080 -e VITE_API_URL=http://localhost:8081 sample-react-go-frontend
 ```
 

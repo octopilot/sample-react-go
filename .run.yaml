@@ -1,0 +1,14 @@
+# Preconfigured ports/env for "op run <context>" (see op docs)
+default_repo: localhost:5001
+tag: latest
+
+contexts:
+  api:
+    ports: ["8081:8080"]
+    env:
+      PORT: "8080"
+  frontend:
+    ports: ["8080:8080"]
+    env:
+      PORT: "8080"
+      VITE_API_URL: "http://localhost:8081"
