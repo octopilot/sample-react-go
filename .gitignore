@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+
+# Node
+node_modules/
+npm-debug.log*
+.npm
+yarn-error.log
+.pnp.*
+.next/
+.nuxt/
+dist/
+*.tsbuildinfo
+
+# Go
+/api
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+vendor/
+
+# Rust
+target/
+Cargo.lock
+
+# Java / Gradle
+target/
+*.class
+*.jar
+*.war
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Ruby
+.bundle/
+vendor/bundle
+*.gem
+*.rbc
+.bundle
+Gemfile.lock
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+*.log
+.env
+.env.local
+.env.*.local

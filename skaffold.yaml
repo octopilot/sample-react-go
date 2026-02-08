@@ -1,0 +1,19 @@
+# sample-react-go: React frontend + Go API. One repo, two images.
+apiVersion: skaffold/v2beta29
+kind: Config
+metadata:
+  name: sample-react-go
+
+build:
+  local: {}
+  artifacts:
+    - image: sample-react-go-frontend
+      context: frontend
+      docker:
+        dockerfile: Dockerfile
+    - image: sample-react-go-api
+      context: api
+      buildpacks:
+        builder: paketobuildpacks/builder-jammy-base
+
+deploy: {}
